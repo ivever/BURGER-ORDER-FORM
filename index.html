@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="main">
+    <header>
+        <img src="https://www.shuttledelivery.co.kr/uploads/pbplus_logo_sq_03484259ffd2e2e636ecf4c5cbc2f6c4.jpg" alt="">
+        <h1 id="title">BigBite Burger</h1>
+        <p id="description">Help us make your burger just the way you want it.</p>
+    </header>
+    <form action="post" id="survey-form">
+        <h2>Customers information</h2>
+        <hr>
+        <div class="form-group">
+            <label for="name" id="name-label">Name</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="email" id="email-label">Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label id="number-label" for="number">Phone Number</label>
+            <input type="number" name="Phone-number" id="number" class="form-control" placeholder="Enter your Phone number">
+        </div>
+        <h2>Let's make your burger!</h2>
+        <hr>
+        <div class="form-group">
+            <label for="patty" id="patty-label">What type of protein would you like?</label>
+            <input type="text" name="patty" id="patty" class="form-control" placeholder="Enter patty" required>
+        </div>
+        <div class="form-group">
+            <label id="number-label" for="amount">How many patties would you like?</label>
+            <input type="number" name="amount" id="amount" min="2" max="10" class="form-control" placeholder="Enter number of patties">
+        </div>
+        <div class="form-group">
+            <label for="doneness" id="doneness-label">How do you want your patty cooked</label>
+            <br>
+            <span>Rare</span>
+            <input type="range" name="doneness" id="doneness" value="3" min="1" max="5" class="form-control">
+            <span>Well-Done</span>
+        </div>
+        <div class="form-group">
+            <label id="toppings-label"><p>What toppings would you like?</p></label>
+            <label id="toppings-label"><input name="Lettuce" value="Lettuce" type="checkbox" class="input-checkbox" checked="">Lettuce</label>
+            <label id="toppings-label">
+            <input name="Tomato" value="Tomato" type="checkbox" class="input-checkbox">Tomato</label>
+            <label id="toppings-label"><input name="onion" value="onion" type="checkbox" class="input-checkbox">Onion</label>
+        </div>
+        <div class="form-group">
+            <label id="cheese-label"><p>Would you like to add cheese?</p></label>
+            <label id="cheese-label"><input name="cheese" value="Yes" type="radio" class="input-radio">Yes</label>
+            <label id="cheese-label">
+            <input name="cheese" value="No" type="radio" class="input-radio">No</label>
+        </div>
+        <div class="form-group">
+            <p id="bun-label">What type of bun would you like?</p>
+            <select id="dropdown" name="bun" class="form-control" required="">
+            <option disabled="" selected="" value="">Select bun</option>
+            <option value="Sesame">Sesame</option>
+            <option value="potato">Potato</option>
+            <option value="pretzel">Pretzel</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="sauce" id="sauce-label">What type of sauce would you like?</label>
+            <input list="sauces" id="sauce" name="sauce">
+            <datalist id="sauces">
+              <option value="ketchup"></option>
+              <option value="mayo"></option>
+              <option value="mustard"></option>
+            </datalist>
+        </div>
+        <div class="form-group">
+            <label id="size-label"><p>Select Burger Size</p></label>
+            <label><input name="size" value="Small" type="radio" class="input-radio">Small</label>
+            <label>
+            <input name="size" value="Medium" type="radio" class="input-radio">Medium</label>
+            <label>
+                <input name="size" value="Large" type="radio" class="input-radio">Large</label>
+        </div>
+        <div class="form-group">
+            <label id="comment-label"><p>Anything else you want to add?</p></label>
+            <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter Anything else you want to add here..."></textarea>
+        </div>
+        <div class="form-group">
+            <label id="delivery-label"><p>Pick up Or Delivery</p></label>
+            <label><input name="order" value="Pick-up" type="radio" class="input-radio">Pick-up</label>
+            <label>
+            <input name="order" value="Delivery" type="radio" class="input-radio">Delivery</label>
+        </div>
+        <div class="form-group">
+            <button id="submit" type="submit" class="submit-button">Submit</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
